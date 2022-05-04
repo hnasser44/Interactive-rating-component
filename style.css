@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+     font-family: 'Overpass',sans-serif;
+     color: var(--White);
+}
+
+p {
+     font-size: 15px;
+     padding: 2px;
+}
+
+.container {
+     background-color: var(--VeryDarkBlue);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     width: 100vw;
+}
+
+.hide {
+     background-color: var(--DarkBlue);
+     width: 90%;
+     padding: 2em;
+     border-radius: 1em;
+}
+
+.star {
+    background-image: url(images/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-size: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.hide h1 {
+     margin-bottom: .5em;
+}
+
+.hide p {
+     opacity: 0.5;
+
+}
+
+.numbers {
+     margin: 2em 0 2em 0;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.num {
+     border-radius: 360%;
+     padding: 1em;
+     background-color: rgba(255, 255, 255, 0.1);
+     transition: all 0.4s ease-in-out;
+     color: var(--White);
+     opacity: 0.5;
+}
+
+.numbers button {
+      border: none;
+      padding: 1.2em;
+      padding-left: 1.5em;
+     padding-right: 1.5em;
+     cursor: pointer;
+}
+
+.num:hover {
+     background-color: var(--LightGrey);
+     opacity: 1;
+}
+
+.num:focus-within {
+    background-color: var(--Orange);
+    opacity: 1;
+
+}
+
+.submit-btn {
+    width: 100%;
+    height: 4.5rem;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: white;
+    background-color: var(--Orange);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.submit-btn:hover {
+     background-color: var(--White);
+     color: var(--Orange);
+     
+}
+
+.thank-you {
+    background-color: var(--DarkBlue);
+    width: 90%;
+    padding: 2em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.thank-you h3 {
+        margin: 1em;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 3rem;
+        padding: .5em;
+        max-width: 100%;
+        color: var(--Orange);
+}
+
+.thank-you h1 {
+     margin-bottom: .5em;
+}
+
+.thank-you p {
+     opacity: 0.5;
+     padding: 0 1em 0 1em;
+}
+
+.hide-main {
+     display: none;
+}
+
+.thank-you-hide {
+     display: none;
+}
+
+@media (min-width: 700px) {
+    body {
+         background-color: var(--VeryDarkBlue);
+    }
+      .container {
+           width: 700px;
+           margin: auto;
+           padding: 5em;
+      }
+      .thank-you {
+           padding: 3em;
+      }
+}
